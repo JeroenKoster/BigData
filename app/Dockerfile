@@ -7,6 +7,11 @@
 FROM ubuntu
 # File Author / Maintainer
 MAINTAINER Jeroen
+
+RUN sudo apt-get update
+
+RUN sudo apt-get install python
+
 COPY . /app
 # Run python script
 CMD python /app/app.py
