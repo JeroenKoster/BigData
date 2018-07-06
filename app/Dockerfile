@@ -4,16 +4,16 @@
 ############################################################
 
 # Set the base image to Ubuntu
-FROM ubuntu
+FROM python:3.6
 # File Author / Maintainer
 MAINTAINER Jeroen
 
-RUN sudo apt-get update
-
-RUN sudo apt-get install python
-
 COPY . /app
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
 # Run python script
-CMD python /app/app.py
+CMD python app.py
 
 RUN echo "App started"
