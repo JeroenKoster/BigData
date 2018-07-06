@@ -8,8 +8,6 @@ FROM ubuntu
 # File Author / Maintainer
 MAINTAINER Jeroen
 COPY . /app
-# Build app
-RUN make /app
 # Run python script
 CMD python /app/app.py
 
