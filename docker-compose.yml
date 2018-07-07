@@ -1,0 +1,8 @@
+version: '1'
+
+services:
+  app:
+    build: './app'
+  mongo:
+    build: './mongo'
+    
