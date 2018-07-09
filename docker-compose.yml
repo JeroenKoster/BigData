@@ -5,21 +5,15 @@ services:
   app:
     container_name: app
     build: './app'
-    networks:
-      - backend
 
-  database:
+  mongo:
     container_name: mongo
     image: mongo
     restart: always
     volumes:
       - ./data:/data/db
-    networks:
-      - backend
 
   zeppelin:
     image: dylanmei/zeppelin
     ports:
       - 8080:8080
-    networks:
-      - backend
