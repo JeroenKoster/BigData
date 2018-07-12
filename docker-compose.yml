@@ -16,7 +16,7 @@ services:
       - ./data:/data/db
 
   zeppelin:
-    image: apache/zeppelin
+    image: apache/zeppelin:0.8.0
     ports:
       - 8080:8080
     volumes:
