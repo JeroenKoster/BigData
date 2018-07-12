@@ -10,10 +10,14 @@ services:
     container_name: mongo
     image: mongo
     restart: always
+    ports:
+        - 27017:27017
     volumes:
       - ./data:/data/db
 
   zeppelin:
-    image: dylanmei/zeppelin
+    image: shamsulazeem/zeppelin-0.8.0-snapshot
     ports:
       - 8080:8080
+    volumes:
+      - ./zeppelin/notebooks:/notebook_json
