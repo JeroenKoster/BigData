@@ -16,7 +16,7 @@ services:
       - ./data:/data/db
 
   zeppelin:
-    image: shamsulazeem/zeppelin-0.8.0-snapshot
+    image: apache/zeppelin
     ports:
       - 8080:8080
     volumes:
