@@ -16,8 +16,9 @@ services:
       - ./data:/data/db
 
   zeppelin:
-    image: shamsulazeem/zeppelin-0.8.0-snapshot
+    container_name: zeppelin
+    build: './zeppelin'
     ports:
       - 8080:8080
     volumes:
-      - ./zeppelin:/usr/zeppelin/notebook_json
+      - ./zeppelin/notebooks:/usr/zeppelin/notebook_json
